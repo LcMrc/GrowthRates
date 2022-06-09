@@ -1,5 +1,6 @@
 # GrowthRates
-C implementation of the codes described in "Challenges and pitfalls of inferring microbial growth rates from lab cultures", by Ana-Hermina Ghenu, Loïc Marrec and Claudia Bank.
+
+C implementation of the codes described in "Challenges and pitfalls of inferring microbial growth rates from lab cultures", by Ana-Hermina Ghenu, Loïc Marrec and Claudia Bank, as well as additional figures and tables that report the fits and estimates obtained from the analysis of four data sets.
 
 Briefly, we perform stochastic simulations of population dynamics using different growth patterns (Baranyi, Gompertz, Logistic and Richards).
 
