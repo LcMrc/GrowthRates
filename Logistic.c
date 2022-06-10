@@ -89,9 +89,9 @@ int main()
 	/* DEFINE YOUR PARAMETERS BELOW */
 	const double FA = 1.0, GA = 0; /* FA: division rate; GA: death rate */
 	const int K = 100000, XA0 = 100, Nit = 10000; /* K: carrying capacity; XA0: initial population size; Nit: number of stochastic realizations */
-	double t = 0, Tvect[2], tlist[301], deltat = .1, tmax = 30; /* deltat: time step; tmax: maximum time */
+	double t = 0, Tvect[2], tlist[301], deltat = .1, tmax = 30; /* deltat: time step; tmax: maximum time; tlist[tmax/deltat+1] */
 	int XA, k, i, j, ir1, ind;
-	auto XAlist = new  int[301][10000];
+	auto XAlist = new  int[301][10000]; /* int[tmax/deltat+1][Nit] */
 
 	for (k = 0; k < Nit; k++)
 	{
@@ -99,7 +99,7 @@ int main()
 		XAlist[ind][k] = XA;
 		ind = ind+1;
 
-		while (XA != 0 && t < tlist[300])
+		while (XA != 0 && t < tlist[300]) /* tlist[tmax/deltat] */
 		{
 			TotalTransitionRate(FA, GA, XA, K, Tvect);
 			CumSum(Tvect, 1);
