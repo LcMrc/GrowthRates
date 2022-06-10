@@ -89,9 +89,9 @@ int main()
 	/* DEFINE YOUR PARAMETERS BELOW */
 	const double FA = 1.0, GA = 0, h0 = 2, K = 100000, XA0 = 100; /* FA: division rate; GA: death rate; h0: lag phase; K: carrying capacity; XA0: initial population size */
 	const int Nit = 10000; /* Number of stochastic realizations */
-	double t = 0, S[2], T[2], Tvect[2], Tvectbis[2], tlist[301], deltat = .1, tmax = 30, Dt[2], XA; /* deltat: time step; tmax: maximum time */
+	double t = 0, S[2], T[2], Tvect[2], Tvectbis[2], tlist[301], deltat = .1, tmax = 30, Dt[2], XA; /* deltat: time step; tmax: maximum time; The value between brackets of tlist must be equal to tmax/deltat+1 */
 	int k, i, j, ir1, ind;
-	auto XAlist = new double[301][10000];
+	auto XAlist = new double[301][10000]; /* The value between the second brackets must be equal to the number of stochastic realizations */
 
 	for (k = 0; k < Nit; k++)
 	{
