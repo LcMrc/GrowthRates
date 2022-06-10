@@ -1,3 +1,5 @@
+/* This code was written by Loïc Marrec */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
