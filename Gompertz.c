@@ -84,10 +84,10 @@ void Reaction(int *X1, int ir1)
 
 int main()
 {
-
-	const double FA = 1.0, GA = 0;
-	const int K = 100000, XA0 = 100, Nit = 10000;
-	double t = 0, Tvect[2], tlist[301], deltat = .1, tmax = 30;
+	/* DEFINE YOUR PARAMETERS BELOW */
+	const double FA = 1.0, GA = 0; /* FA: division rate; GA: death rate */
+	const int K = 100000, XA0 = 100, Nit = 10000; /* K: carrying capacity; XA0: initial population size; Nit: number of stochastic realizations */
+	double t = 0, Tvect[2], tlist[301], deltat = .1, tmax = 30; /* deltat: time step; tmax: maximum time */
 	int XA, k, i, j, ir1, ind;
 	auto XAlist = new int[301][10000];
 
